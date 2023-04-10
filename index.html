@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lower Extremity Functional Scale Score Calculator</title>
+	<style>
+		@font-face{
+			font-family: 'Source Code Pro';
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+			src: url('./WOFF2/TTF/SourceCodePro-Light.ttf.woff2') format('woff2'),
+				url('./WOFF/OTF/SourceCodePro-Light.otf.woff') format('woff'),
+				url('./OTF/SourceCodePro-Light.otf') format('opentype'),
+				url('./TTF/SourceCodePro-Light.ttf') format('truetype');
+		}
+		/*
+		body {
+			margin: 0;
+		}
+
+		div {
+			width: 100vw;
+			height: 100vh;
+		}
+		*/
+
+		html {
+        background-color: rgb(208, 219, 233);
+      	}
+
+		h1 {
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 40px;
+	
+		}
+
+		h2 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			font-size: 25px;
+		}
+
+		body {
+		margin: 0;
+		padding: 0;
+		}
+
+
+		form {
+		margin: 10px;
+		max-width: auto;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 30px;
+		background-color: rgb(224, 233, 246);
+        line-height: 2;
+		}
+
+		input {
+			font-size: 30px;
+		}
+
+		p {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		}
+
+		input[type="radio"] {
+		margin-right: 10px;
+		transform: scale(1.5);
+		}
+
+		input[type="radio"]:last-child {
+		margin-right: 0;
+		}
+
+		button {
+			background-color: rgb(0, 145, 255);
+			color: white;
+
+			border: none;
+			border-radius: 25px;
+			cursor: pointer;
+			font-size: 30px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		button[type="button"]:hover {
+		background-color: rgb(100, 182, 245);
+		}
+
+		.btn-primary {
+			/* padding: 23px 33px; */
+			padding: 20px 33px;
+			
+		}
+
+        .increase-font-size-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 9px 10px;
+		background-color: white;
+		color: black;
+        }
+
+		.decrease-font-size-btn{
+			position: absolute;
+			top: 10px;
+			right: 50px;
+			padding: 9px 10px;
+			background-color: white;
+			color: black;
+        }
+		
+		#result {
+		margin-top: 20px;
+		font-size: 30px;
+		font-weight: bold;
+		}
+
+
+
+	</style>
+	<script type="text/javascript">
+		function calculateQuickDASH() {
+			var values = document.getElementsByClassName("score");
+			var totalScore = 0;
+			var totalQuestions = 0;
+			for(var i = 0; i < values.length; i++) {
+				if(values[i].checked) {
+					totalScore += parseFloat(values[i].value);
+					totalQuestions++;
+				}
+			}
+
+            var quickDASHscore = totalScore;
+            document.getElementById("result").innerHTML = "請勿關閉此頁面，並將以下資料展示給物理治療師。<br> Your Score is: " + quickDASHscore + "/80";
+				
+		}
+
+
+	</script>
+</head>
+<body>
+	<h1> 下肢功能評量表 </h1>
+	<h2> 威爾斯親王醫院 物理治療部</h2>
+	<form>
+		<p>由於您目前正因下肢有問題而尋求協助，所以我們想了解，從事下列活動時，您是否會有任何困難。</p>
+
+		<p>請對每項活動，各勾選一個答案。</p>
+
+        <p>今天，您從事下列活動時，是否會有或預期有任何困難？</p>
+
+        <br>
+			<p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+			<br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+			<br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+            <br><br><p>1. 您平日任何的工作、家事或學校活動</p>
+			<input type="radio" name="section1" value="0" class="score"> 極度困難或無法做到
+			<input type="radio" name="section1" value="1" class="score"> 非常困難
+			<input type="radio" name="section1" value="2" class="score"> 中等困難
+			<input type="radio" name="section1" value="3" class="score"> 有點困難
+			<input type="radio" name="section1" value="4" class="score"> 毫無困難
+			<br>
+		<br>
+		<br>
+		<button type="button" class="btn-primary" onclick="calculateQuickDASH()">提交</button>
+        <br>
+        <p style="text-align: center;"><strong>謝謝你的幫忙。</strong></p>
+		<div id="result"></div>
+	</form>
+</body>
+</html>
